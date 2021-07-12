@@ -13,9 +13,9 @@ const people = [
     age: 25,
     email: "alex@gmail.com"
     },
-    {name: "Eva", 
+    {name: "Jessica", 
     age: 22,
-    email: "Eva@gmail.com"
+    email: "jess@gmail.com"
     },
     {name: "Vero", 
     age: 24,
