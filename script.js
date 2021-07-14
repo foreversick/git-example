@@ -32,3 +32,16 @@ console.log(names)
 button.addEventListener('click', () => {
     loadNames(names)
 })
+
+/*
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
+*/
+
+const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+const data = await response.json()
+console.log(data)
+
+const { userId, title } = data;
+console.log(`User ID: ${userId}, ${title}`)
