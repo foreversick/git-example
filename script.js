@@ -57,3 +57,5 @@ const responses = await Promise.all(
 const dataPromises = responses.map(result => result.json())
 const finalData = await Promise.all(dataPromises)
 console.log(finalData)
+
+console.log('updated')
