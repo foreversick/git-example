@@ -45,3 +45,15 @@ console.log(data)
 
 const { userId, title } = data;
 console.log(`User ID: ${userId}, ${title}`)
+
+// Promise.all
+const responses = await Promise.all(
+    [
+        fetch('https://jsonplaceholder.typicode.com/todos/2'),
+        fetch('https://jsonplaceholder.typicode.com/todos/3')
+    ]
+)
+
+const dataPromises = responses.map(result => result.json())
+const finalData = await Promise.all(dataPromises)
+console.log(finalData)
